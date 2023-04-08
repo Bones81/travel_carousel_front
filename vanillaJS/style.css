@@ -1,0 +1,59 @@
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .carousel-items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  .carousel-items img {
+    flex: 1;
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 1s ease-in-out;
+    transform: translateX(0%);
+    opacity: 0;
+  }
+
+  .carousel-items img.selected {
+    position: relative;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .carousel-items img.previous {
+    transform: translateX(100%);
+    opacity: .5
+  }
+
+  .carousel-items img.next {
+    transform: translateX(-100%);
+    opacity: .5
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
